@@ -43,4 +43,5 @@ class KelasModel extends Model
     {
         return $this->findAll();
     }
+
 }
