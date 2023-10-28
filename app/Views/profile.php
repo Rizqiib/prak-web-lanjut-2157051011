@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 </head>
 <body>
+
     <center><img src="<?= base_url('assets/img/pp.jpg')?>" alt="" class="round-image"><br>
+
+
+    <center><img src="<?= base_url('assets/img/pp.jpg')?>" alt="" class="round-image"><br>
+
     <div>
         <div class="outlined-box">
             <tr>

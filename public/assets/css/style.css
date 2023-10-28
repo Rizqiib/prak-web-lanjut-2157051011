@@ -15,6 +15,7 @@
     padding: 10px;
     margin: 10px;
 }
+
  
 body {
     font-family: Arial, sans-serif;
@@ -39,6 +40,7 @@ body {
     margin-bottom: 20px;
 }
 
+
 .form-container select {
     width: 100%;
     padding: 10px;
@@ -46,6 +48,7 @@ body {
     border-radius: 5px;
     margin-bottom: 15px;
 }
+
 
 .form-group {
     margin-bottom: 15px;
@@ -76,3 +79,4 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+

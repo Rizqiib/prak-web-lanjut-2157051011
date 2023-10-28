@@ -19,6 +19,7 @@
                 <input type="text" id="npm" name="npm" required>
             </div>
             <div class="form-group">
+
                 <select name="kelas" id="kelas">
                     <option value="" selected disabled>Pilih Kelas</option>
                         <?php
@@ -31,6 +32,10 @@
                     } 
                     ?>
                 </select>
+
+                <label for="class">Kelas:</label>
+                <input type="text" id="class" name="kelas" required>
+
             </div>
             <button type="submit">Submit</button>
         </form>

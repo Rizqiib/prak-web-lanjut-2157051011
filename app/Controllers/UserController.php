@@ -3,7 +3,9 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+
 use App\Models\UserModel;
+
 
 class UserController extends BaseController
 {
@@ -11,6 +13,7 @@ class UserController extends BaseController
     {
         //
     }
+
 
     public function profile($nama = "", $kelas = "", $npm = ""){
         $data = [
@@ -79,9 +82,12 @@ class UserController extends BaseController
         // dd($this->request->getVar());
         $data = [
             'nama' => $this->request->getVar('nama'),
-            'kelas' => $this->request->getVar('kelas'),
-            'npm' => $this->request->getVar('npm'),
-        ];
-        return view('profile', $data);
-    }
+
+
+
+
+
 }
+
+}
+
