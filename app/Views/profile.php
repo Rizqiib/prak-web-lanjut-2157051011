@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 </head>
 <body>
+
     <?= $this->extend('layouts/app')?>
     <?= $this->section('content')?>
     <body>
@@ -33,5 +34,31 @@
             </div>
         </div>
     <?= $this->endSection('content') ?>
+
+
+    <center><img src="<?= base_url('assets/img/pp.jpg')?>" alt="" class="round-image"><br>
+
+
+    <center><img src="<?= base_url('assets/img/pp.jpg')?>" alt="" class="round-image"><br>
+
+    <div>
+        <div class="outlined-box">
+            <tr>
+                <td><?= $nama ?></td>
+            </tr><br>
+        </div>
+        <div class="outlined-box">
+            <tr>
+                <td><?= $kelas ?></td>
+            </tr><br>
+        </div>
+        <div class="outlined-box">
+            <tr>
+                <td><?= $npm ?></td>
+            </tr>
+        </div>
+    </div>
+    </center>
+
 </body>
 </html>
