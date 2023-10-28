@@ -10,13 +10,11 @@ use App\Models\UserModel;
 class UserController extends BaseController
 {
 
-
 use App\Models\UserModel;
 use App\Models\KelasModel;
 
 class UserController extends BaseController
 {
-
 
     public $userModel;
     public $kelasModel;
@@ -36,10 +34,6 @@ class UserController extends BaseController
         return view('list_user', $data);
     }
 
-    public function profile($nama = "", $kelas = "", $npm = "")
-    {
-
-
 
 class UserController extends BaseController
 {
@@ -51,6 +45,7 @@ class UserController extends BaseController
 
 
     public function profile($nama = "", $kelas = "", $npm = ""){
+
 
         $data = [
             'nama' => $nama,
@@ -99,11 +94,13 @@ class UserController extends BaseController
 
         $data  = [
 
+
             'kelas' => $kelas,
             'validation' => \Config\Services::validation()
         ];
         return view('create_user', $data);
     }
+
 
     public function store(){
 
@@ -209,6 +206,9 @@ class UserController extends BaseController
         return redirect()->to(base_url('/user'))
             ->with('success', 'Berhasil menghapus data');
     }
+
+}
+
 }
 
 
@@ -243,4 +243,5 @@ class UserController extends BaseController
 }
 
 }
+
 

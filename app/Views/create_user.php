@@ -64,7 +64,6 @@
     <?= $this->endSection('content') ?>
 
 
-
     <div class="form-container">
         <h2>Input Data Mahasiswa</h2>
         <form action="<?= base_url('/user/store') ?>" method="POST">

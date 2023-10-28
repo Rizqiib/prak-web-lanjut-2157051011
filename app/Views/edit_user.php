@@ -12,7 +12,11 @@
     <?= $this->section('content')?>
     <div class="container">
         <div class="form-box">
+
+            <h1 class="mb-0">Edit User</h1>
+
             <h1 class="mb-0">Form Controllers</h1>
+
             <div class="form">
                 <form action="<?= base_url('/user/'. $user['id']);?>" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">

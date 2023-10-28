@@ -16,6 +16,8 @@ class UserModel extends Model
 
     protected $allowedFields    = ['nama', 'npm', 'id_kelas', 'foto'];
 
+    protected $allowedFields    = ['nama', 'npm', 'id_kelas', 'foto'];
+
     protected $allowedFields    = ['nama', 'npm', 'id_kelas'];
 
 
@@ -64,10 +66,8 @@ class UserModel extends Model
         return $this->delete($id);
     }
 
-
     public function getUser(){
         return $this->join('kelas', 'kelas.id=user.id_kelas')->findAll();
     }
-
 
 }
