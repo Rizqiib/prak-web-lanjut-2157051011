@@ -5,6 +5,28 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 
 use App\Models\UserModel;
+use App\Models\KelasModel;
+
+class UserController extends BaseController
+{
+
+    public $userModel;
+    public $kelasModel;
+
+    public function __construct()
+    {
+        $this->userModel = new UserModel();
+        $this->kelasModel = new KelasModel();
+    }
+
+    public function index()
+    {
+        $data = [
+            'title' => 'List User',
+            'users' => $this->userModel->getUser(),
+        ];
+        return view('list_user', $data);
+    }
 
 
 class UserController extends BaseController
@@ -13,6 +35,7 @@ class UserController extends BaseController
     {
         //
     }
+
 
 
     public function profile($nama = "", $kelas = "", $npm = ""){
@@ -46,7 +69,13 @@ class UserController extends BaseController
             ],
         ];
 
+        $kelas = $this->kelasModel->getKelas();
         $data  = [
+            'title' => 'Create User',
+
+
+        $data  = [
+
             'kelas' => $kelas,
             'validation' => \Config\Services::validation()
         ];
@@ -73,13 +102,28 @@ class UserController extends BaseController
             return redirect()->to(base_url('/user/create'))->withInput()->with('validation', $validation);
         }
 
+
+        $this->userModel->saveUser([
+
         $userModel = new UserModel();
         $userModel->saveUser([
+
             'nama' => $this->request->getVar('nama'),
             'id_kelas' => $this->request->getVar('kelas'),
             'npm' => $this->request->getVar('npm'),
         ]);
         // dd($this->request->getVar());
+
+        // $data = [
+        //     'nama' => $this->request->getVar('nama'),
+        //     'kelas' => $this->request->getVar('kelas'),
+        //     'npm' => $this->request->getVar('npm'),
+        // ];
+        // return view('profile', $data);
+        return redirect()->to(base_url('/user'));
+    }
+}
+
         $data = [
             'nama' => $this->request->getVar('nama'),
 
